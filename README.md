@@ -20,4 +20,4 @@ java -cp out PizzariaApp
 ```
 
 ## Autor
-Suba este repositório no GitHub conforme instruído pelo ChatGPT.
+Leandro guedes e Clarissa rayane
