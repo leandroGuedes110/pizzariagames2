@@ -9,7 +9,6 @@ import java.util.Locale;
 import java.util.Scanner;
 import FactoryMethod.Pizza;
 import FactoryMethod.PizzaFactory;
-// Importando todas as Strategy
 import Strategy.DescontoDoProfessor10_10QueVaiMeDar10;
 import Strategy.DescontoDaQuartaFeira;
 import Strategy.PagamentoComDesconto;
@@ -30,7 +29,7 @@ public class PizzariaApp {
             System.out.println("\nEscolha o sabor da sua pizza:");
             System.out.println("1. Queijo (" + FORMATADOR_MOEDA.format(40.00) + ")");
             System.out.println("2. Calabresa (" + FORMATADOR_MOEDA.format(45.00) + ")");
-            System.out.println("3. Frangão (" + FORMATADOR_MOEDA.format(45.00) + ")"); // Novo sabor
+            System.out.println("3. Frangão (" + FORMATADOR_MOEDA.format(45.00) + ")");
             System.out.print("Selecione o número do sabor (1, 2 ou 3): ");
             String escolha = scanner.nextLine().trim();
 
@@ -123,9 +122,9 @@ public class PizzariaApp {
 
 
         PagamentoStrategy normal = new PagamentoNormal();
-        PagamentoStrategy sabadao = new PagamentoComDesconto(); // 20%
-        PagamentoStrategy quarta = new DescontoDaQuartaFeira(); // 10%
-        PagamentoStrategy professor = new DescontoDoProfessor10_10QueVaiMeDar10(); // 100%
+        PagamentoStrategy sabadao = new PagamentoComDesconto();
+        PagamentoStrategy quarta = new DescontoDaQuartaFeira();
+        PagamentoStrategy professor = new DescontoDoProfessor10_10QueVaiMeDar10();
 
 
         double precoNormal = normal.calcularPrecoFinal(precoBruto);
@@ -139,7 +138,7 @@ public class PizzariaApp {
             System.out.println("Preço Total SEM Desconto: " + FORMATADOR_MOEDA.format(precoBruto));
             System.out.println("\nOpções de Pagamento:");
 
-            // Pré-apresentação dos descontos com preço final
+            
             System.out.printf("1. %s | Preço Final: %s%n", normal.getNomeEstrategia(), FORMATADOR_MOEDA.format(precoNormal));
             System.out.printf("2. %s | Preço Final: %s%n", sabadao.getNomeEstrategia(), FORMATADOR_MOEDA.format(precoSabadao));
             System.out.printf("3. %s | Preço Final: %s%n", quarta.getNomeEstrategia(), FORMATADOR_MOEDA.format(precoQuarta));
