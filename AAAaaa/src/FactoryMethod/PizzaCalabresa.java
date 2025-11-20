@@ -8,6 +8,6 @@ public class PizzaCalabresa implements Pizza {
 
     @Override
     public double getCusto() {
-        return 45.00; // Custo base
+        return 45.00; 
     }
 }
